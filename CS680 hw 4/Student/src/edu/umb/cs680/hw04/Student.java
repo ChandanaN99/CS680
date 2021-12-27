@@ -1,10 +1,10 @@
 package edu.umb.cs680.hw04;
 
 enum StudentStatus{
-	INSTATE(1000),OUTSTATE(2000),INTL(3000);
+	OUTSTATE(3000),INSTATE(300),INTL(3000);
 	private float tution;
-	StudentStatus(float m){
-		this.tution = m;
+	StudentStatus(float n){
+		this.tution = n;
 	}
 	public float getTution() {
 		return this.tution;
@@ -15,19 +15,19 @@ enum StudentStatus{
 public class Student {
 	
 	private float tution;
+	private String usAddress;
+	private int yearsInState;
 	private String name;
-	private int i20num;
-	private String usAddr;
-	private int yrsInState;
-	private String foreignAddr;
+	private int i20number;
+	private String foreignAddress;
 	private StudentStatus status;
 	
 	protected Student(String name, String usAddr, int years, int i20num, String foreignAddr, StudentStatus status) {
 		this.name = name;
-		this.usAddr = usAddr;
-		this.yrsInState = years;
-		this.i20num = i20num;
-		this.foreignAddr = foreignAddr;
+		this.usAddress = usAddress;
+		this.yearsInState = years;
+		this.i20number = i20number;
+		this.foreignAddress = foreignAddress;
 		this.status = status;
 	}
 	
@@ -43,19 +43,19 @@ public class Student {
 		return this.status;
 	}
 	
-	public int geti20Num() {
-		return this.i20num;
+	public int geti20Number() {
+		return this.i20number;
 	}
 	
-	public String getUSAddr() {
-		return this.usAddr;
+	public String getUSAddress() {
+		return this.usAddress;
 	}
 	
-	public String getForeignAddr() {
-		return this.foreignAddr;
+	public String getForeignAddress() {
+		return this.foreignAddress;
 	}
 	
-	public int getYrsInState() {
-		return this.yrsInState;
+	public int getYearsInState() {
+		return this.yesrsInState;
 	}
 }
